@@ -10,25 +10,30 @@
 </head>
 <body>
     <!-- Full page of a pokeball-->
-    <div class="container pokeball" id="pokeball">
+    <div class="container pokeball pokeball-colour" id="pokeball">
         <div class="row align-items-center">
             <div class="col d-flex justify-content-center">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center">Pokémon</h1>
+                    <div class="first">
+                        <div class="col-12">
+                            <h1 class="text-center">Pokémon</h1>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <input type="text" placeholder="Choose your Pokémon!">
+                        </div>
                     </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <input type="text" placeholder="Choose your Pokémon!">
+                    <div class="second">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="button" class="btn btn-light">Submit</button>
+                        </div>
                     </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn btn-light">Submit</button>
-                    </div>
+                    <div class="third"></div>
                 </div>
             </div>
         </div>
     </div>
     <!-- When Submit is clicked we come down here -->
-    <div class="container" id="pokemon-stats">
+    <div class="container pokemon-stats" id="pokemon-stats">
         <div class="row align-items-center">
             <div class="col d-flex justify-content-center">
                 <div class="row">
