@@ -6,18 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
-    <title>POKEMON STATS</title>
+    <title>Pokémon Stats</title>
 </head>
 <body>
+    <!-- Full page of a pokeball-->
     <div class="container pokeball" id="pokeball">
         <div class="row align-items-center">
-            <div class="col align-items-center">
-                <h1 class="text-center">Pokemon</h1>
+            <div class="col d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Pokémon</h1>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <input type="text" placeholder="Choose your Pokémon!">
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <button type="button" class="btn btn-light">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- When Submit is clicked we come down here -->
+    <div class="container" id="pokemon-stats">
         <div class="row align-items-center">
-            <div class="col align-items-center">
-                <input type="text">
+            <div class="col d-flex justify-content-center">
+                <div class="row">
+                    <!-- Pokemon Name -->
+                    <div class="col-12">
+                        <h2 id="pokemon-name">Pokemon Name</h2>
+                    </div>
+                    <!-- Pokemon Images -->
+                    <div class="col-12" id="pokemon-image">
+                        <!-- Image of our pokemon and our pokemons evolution -->
+                        <div class="row">
+
+                        </div>
+                    </div>
+                    <!-- all the stats -->
+                    <div class="col-12" id="pokemon-stats">
+                        <div class="row">
+                            <div class="col-6">
+                                Attack
+                            </div>
+                            <div class="col-6">
+                                Defence
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                Stamina
+                            </div>
+                            <div class="col-6">
+                                IV
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Go Back and Go to Website Button -->
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-danger">Go Back</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-danger">Go to Website</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
