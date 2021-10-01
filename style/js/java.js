@@ -70,7 +70,6 @@ function getPokemon() {
     fetch("https://pokeapi.co/api/v2/pokemon/" + searchPokemon.toLowerCase())
     .then(function(response){
         if (response.ok) {
-            console.log(response)
             return response.json();
         }
         else {
@@ -79,17 +78,66 @@ function getPokemon() {
         }
     })
     .then(function(response){
+        console.log(response)
+        console.log(response.stats[0].base_stat)
+
+        // displaying stats
+        var hpEl = document.querySelector("#hp")
+        var hp = response.stats[0].base_stat
+        hpEl.innerHTML = '<span>' + 'HP: ' + hp + '</span>'
+
+        var attackEl = document.querySelector("#attack")
+        var attack = response.stats[1].base_stat
+        attackEl.innerHTML = '<span>' + 'Attack: ' + attack + '</span>'
+
+        var defenceEl = document.querySelector("#defence")
+        var defence = response.stats[2].base_stat
+        defenceEl.innerHTML = '<span>' + 'Defence: ' + defence + '</span>'
+
+        var specialAttackEl = document.querySelector("#special-attack")
+        var specialAttack = response.stats[3].base_stat
+        specialAttackEl.innerHTML = '<span>' + 'Special Attack: ' + specialAttack + '</span>'
+
+        var specialDefenceEl = document.querySelector("#special-defence")
+        var specialDefence = response.stats[4].base_stat
+        specialDefenceEl.innerHTML = '<span>' + 'Special Defence: ' + specialDefence + '</span>'
+
+        var speedEl = document.querySelector("#speed")
+        var speed = response.stats[5].base_stat
+        speedEl.innerHTML = '<span>' + 'Speed   : ' + speed + '</span>'
+
         //Attaching fetched image of pokemon to display on page
         pokemonName.innerHTML = searchPokemon;
         
-        var imgEl = document.querySelector("#pokemon-image")
+
+        var pokeId = response.id
+        console.log(pokeId)
+
+        if(pokeId < 10) {
+            return fetch("https://api.github.com/repos/ZeChrales/PogoAssets/contents/pokemon_icons/pokemon_icon_00" + pokeId + "_00.png")
+        }
+        else if(pokeId > 10 && pokeId < 100){
+            return fetch("https://api.github.com/repos/ZeChrales/PogoAssets/contents/pokemon_icons/pokemon_icon_0" + pokeId + "_00.png")
+        }
+        else {
+            return fetch("https://api.github.com/repos/ZeChrales/PogoAssets/contents/pokemon_icons/pokemon_icon_" + pokeId + "_00.png")
+        }
+    })
+        .then(function(response){
+            console.log(response)
+            return response.json();
+        })
+        .then(function(response){
+            console.log(response);
+            var imgEl = document.querySelector("#pokemon-image")
 
         imgEl.innerHTML = '';
         var img = document.createElement('img');
-        img.setAttribute('src', response.sprites.front_default)
+        img.setAttribute('src', response.download_url)
 
         imgEl.appendChild(img);
-    })
+        })
+
     createCaughtPokemon()
 
     document.querySelector("#search-pokemon").value = "";
