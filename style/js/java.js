@@ -8,7 +8,7 @@ function createCaughtPokemon() {
     caughtPokemon.push(searchPokemon);
 
     var ulist = document.querySelector("#caught-ulist");
-    var savedPokemon = searchPokemon;
+    var savedPokemon = pokemonDisplayName(searchPokemon);
     var li = document.createElement("caught-li");
 
     // appends the searched pokemon to the list at the top of the page for Caught pokemon
@@ -51,7 +51,10 @@ function clearStorage(){
     location.reload();    
 }
 
-
+function pokemonDisplayName(searchPokemon){
+    var small = searchPokemon.toLowerCase()
+    return searchPokemon.charAt(0).toUpperCase() + small.slice(1)
+}
 
 //Function to call Api
 function getPokemon() {
@@ -107,7 +110,7 @@ function getPokemon() {
         speedEl.innerHTML = '<span>' + 'Speed   : ' + speed + '</span>'
 
         //Attaching fetched image of pokemon to display on page
-        pokemonName.innerHTML = searchPokemon;
+        pokemonName.innerHTML = pokemonDisplayName(searchPokemon);
         
 
         var pokeId = response.id
