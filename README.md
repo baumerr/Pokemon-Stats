@@ -2,7 +2,7 @@
 
 ## Introduction
 >
-Pokemon Stats is a profile access library to find stats and other information on Pokemon characters and their attributes. 
+>Pokemon Stats is a profile access library to find stats and other information on Pokemon >characters and their attributes. 
 -----
 ### Deployed Link
 >
