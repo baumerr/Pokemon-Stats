@@ -146,5 +146,8 @@ function getPokemon() {
     document.querySelector("#search-pokemon").value = "";
 }
 
+var startSearch = document.getElementById("user-submit");
+startSearch.addEventListener("submit", getPokemon);
+
 //call returnLocalStorage function on load
 returnLocalStorage()
