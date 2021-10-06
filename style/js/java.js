@@ -158,6 +158,12 @@ function getPokemon(event) {
       console.log("it's not working");
     });
 
+    var website = document.querySelector("#website")
+
+    var websitePokemon = searchPokemon.toLowerCase();
+    website.innerHTML = "";
+    website.innerHTML = '<a href="https://pokemondb.net/pokedex/' + websitePokemon + '"target="blank" class="text-decoration-none text-light"> Go to Website </a>'   
+
   createCaughtPokemon();
 
   document.querySelector("#search-pokemon").value = "";
