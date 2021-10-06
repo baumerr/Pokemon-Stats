@@ -10,14 +10,20 @@ function createCaughtPokemon() {
   var ulist = document.querySelector("#caught-ulist");
   var savedPokemon = pokemonDisplayName(searchPokemon);
   var li = document.createElement("caught-li");
+  var pokemonCaughtButtonEl = document.createElement("button");
 
+  
   // appends the searched pokemon to the list at the top of the page for Caught pokemon
   li.className = "list-group-item";
-  li.appendChild(document.createTextNode(savedPokemon));
+  //pokemonCaughtButtonEl.appendChild(document.createTextNode(savedPokemon));
+  pokemonCaughtButtonEl.textContent = savedPokemon;
   ulist.appendChild(li);
+  li.appendChild(pokemonCaughtButtonEl);
 
   //Locally stores the searched pokemon
   localStorage.setItem("caughtPokemon", JSON.stringify(caughtPokemon));
+
+  pokemonCaughtButtonEl.addEventListener("click", getPokemon);
 }
 
 // return the pokemon from localstorage
@@ -62,14 +68,14 @@ function getPokemon(event) {
   var searchPokemon = document.querySelector("#search-pokemon").value;
   var pokemonName = document.querySelector("#pokemon-name");
   pokemonName.innerHTML = "";
+    
+  console.log(caughtPokemon.id);
 
   console.log(searchPokemon);
 
   if (!searchPokemon) {
     alert("You need to enter something");
     return false;
-  } else {
-    console.log("yo");
   }
 
   // Fetch call
@@ -165,6 +171,7 @@ function getPokemon(event) {
 
 var startSearch = document.getElementById("user-submit");
 startSearch.addEventListener("submit", getPokemon);
+ 
 
 //call returnLocalStorage function on load
 returnLocalStorage();
