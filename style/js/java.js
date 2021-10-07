@@ -12,7 +12,7 @@ function createCaughtPokemon() {
   var li = document.createElement("caught-li");
   var pokemonCaughtButtonEl = document.createElement("button");
 
-  
+
   // appends the searched pokemon to the list at the top of the page for Caught pokemon
   li.className = "list-group-item";
   //pokemonCaughtButtonEl.appendChild(document.createTextNode(savedPokemon));
@@ -69,7 +69,7 @@ function getPokemon(event) {
   var pokemonName = document.querySelector("#pokemon-name");
   pokemonName.innerHTML = "";
     
-  console.log(caughtPokemon.id);
+  //console.log(pokemonCaughtButtonEl);
 
   console.log(searchPokemon);
 
@@ -159,10 +159,6 @@ function getPokemon(event) {
 
       imgEl.appendChild(img);
     })
-    .catch(function (event) {
-      console.log(event);
-      console.log("it's not working");
-    });
 
   createCaughtPokemon();
 
