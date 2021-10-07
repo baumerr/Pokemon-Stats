@@ -9,92 +9,101 @@
     <title>Pokémon Stats</title>
 </head>
 <body>
-    <header>
-        <ul id="caught-ulist" class="list-group list-group-horizontal">
-            <li id="caught-li"class="list-group-item">Pokémon Caught</li>
-          </ul>
-          <button type="button" class="btn btn-light" onclick="clearStorage()">Release Pokémon</button>
-    </header>
     <!-- Full page of a pokeball-->
-    <div class="container pokeball pokeball-colour" id="pokeball">
-        <div class="row align-items-center">
-            <div class="col d-flex justify-content-center">
-                <div class="row">
-                    <form class="first" id="user-submit">
-                        <div class="col-12">
-                            <h1 class="text-center">Pokémon</h1>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input id="search-pokemon" type="text" placeholder="Choose your Pokémon!">
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <!--<button type="button" id="submit" class="btn btn-light" onclick="getPokemon()"</button>>Submit</button>-->
-                            <button type="submit" class="btn btn-light">Submit</button>
+    <main>
+        <div class="container pokeball pokeball-colour" id="pokeball">
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center">
+                    <div class="row">
+                        <form class="first align-items-center" id="user-submit">
+                            <div>
+                                <ul id="caught-ulist" class="list-group list-group-horizontal flex-wrap">
+                                    <li id="caught-li"class="list-group-item">Pokémon Caught</li>
+                                </ul>
+                                  <button type="button" class="btn btn-warning" onclick="clearStorage()">Release Pokémon</button>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <img class="title-image" src="./style/images/pokemon.png" alt="Pokemon">
+                            </div>
+                            <div class="d-flex">
+                                <div class="centering-search col-12 d-flex justify-content-center">
+                                    <input id="search-pokemon" type="text" placeholder="Choose your Pokémon!">
+                                </div>
+                                </div>
+                            <div class="centering-circle d-flex">
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <!--<button type="button" id="submit" class="btn btn-light" onclick="getPokemon()"</button>>Submit</button>-->
+                                    <button id="user-submit"type="submit" class="circle btn btn-light">Search</button>
+                                    <div class="outcircle"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="second d-flex justify-content-center">
                         </div>
                         <div class="third"></div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- When Submit is clicked we come down here -->
-    <div class="container pokemon-stats" id="pokemon-stats">
-        <div class="row align-items-center">
-            <div class="col d-flex justify-content-center">
-                <div class="row">
-                    <!-- Pokemon Name -->
-                    <div class="col-12 d-flex justify-content-center">
-                        <h2 id="pokemon-name">Pokemon Name</h2>
-                    </div>
-                    <!-- Pokemon Images -->
-                    <div class="col-12 d-flex justify-content-center" id="pokemon-image">
-                        <!-- Image of our pokemon and our pokemons evolution -->
-                        <div class="row">
-
-                        </div>
-                    </div>
-                    <!-- all the stats -->
-                    <div class="col-12" id="pokemon-stats">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="hp">HP:</p>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="attack">Attack:</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="defence">Defence:</p>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="special-attack">Special Attack:</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="special-defence">Special Defence:</p>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center">
-                                <p id="speed">Speed:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Go Back and Go to Website Button -->
+        <!-- When Submit is clicked we come down here -->
+        <div class="container pokemon-stats" id="pokemon-stats">
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center">
                     <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-                            <button type="button" class="btn btn-danger ">
-                                <a href="#caught-ulist" class="text-decoration-none text-light">Go Back</a>
-                            </button>
+                        <!-- Pokemon Name -->
+                        <div class="col-12 d-flex justify-content-center">
+                            <h2 id="pokemon-name">Pokemon Name</h2>
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <button id="website" type="button" class="btn btn-danger">Go to Website</button>
+                        <!-- Pokemon Images -->
+                        <div class="col-12 d-flex justify-content-center" id="pokemon-image">
+                            <!-- Image of our pokemon and our pokemons evolution -->
+                            <div class="row">
+
+                            </div>
+                        </div>
+                        <!-- all the stats -->
+                        <div class="col-12" id="pokemon-stats">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="hp">HP:</p>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="attack">Attack:</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="defence">Defence:</p>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="special-attack">Special Attack:</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="special-defence">Special Defence:</p>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center">
+                                    <p id="speed">Speed:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Go Back and Go to Website Button -->
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center">
+                                <button type="button" class="btn btn-danger ">
+                                    <a href="#caught-ulist" class="text-decoration-none text-light">Go Back</a>
+                                </button>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <button id="website" type="button" class="btn btn-danger">Go to Website</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="style/js/java.js"></script>
 </body>
 </html>
