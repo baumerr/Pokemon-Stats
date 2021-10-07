@@ -45,64 +45,70 @@
                 </div>
             </div>
         </div>
-        <!-- When Submit is clicked we come down here -->
-        <div class="container pokemon-stats" id="pokemon-stats">
-            <div class="row align-items-center">
-                <div class="col d-flex justify-content-center">
-                    <div class="row">
-                        <!-- Pokemon Name -->
-                        <div class="col-12 d-flex justify-content-center">
-                            <h2 id="pokemon-name">Pokemon Name</h2>
-                        </div>
-                        <!-- Pokemon Images -->
-                        <div class="col-12 d-flex justify-content-center" id="pokemon-image">
-                            <!-- Image of our pokemon and our pokemons evolution -->
-                            <div class="row">
+              <!-- When Submit is clicked we come down here -->
+      <div class="container pokemon-stats" id="pokemon-stats">
+        <div class="row align-items-center">
+          <div class="col d-flex justify-content-center">
+            <div class="row">
+              <!-- My Modal -->
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
 
-                            </div>
-                        </div>
-                        <!-- all the stats -->
-                        <div class="col-12" id="pokemon-stats">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="hp">HP:</p>
-                                </div>
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="attack">Attack:</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="defence">Defence:</p>
-                                </div>
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="special-attack">Special Attack:</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="special-defence">Special Defence:</p>
-                                </div>
-                                <div class="col-6 d-flex justify-content-center">
-                                    <p id="speed">Speed:</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Go Back and Go to Website Button -->
-                        <div class="row">
-                            <div class="col-6 d-flex justify-content-center">
-                                <button type="button" class="btn btn-danger ">
-                                    <a href="#caught-ulist" class="text-decoration-none text-light">Go Back</a>
-                                </button>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center">
-                                <button id="website" type="button" class="btn btn-danger">Go to Website</button>
-                            </div>
-                        </div>
+                  <!-- Pokemon Name -->
+                  <div class="col-12 d-flex justify-content-center">
+                    <h2 id="pokemon-name">Pokemon Name</h2>
+                  </div>
+                  <!-- Pokemon Images -->
+                  <div
+                    class="col-12 d-flex justify-content-center"
+                    id="pokemon-image"
+                  >
+                    <!-- Image of our pokemon and our pokemons evolution -->
+                    <div class="row"></div>
+                  </div>
+                  <!-- all the stats -->
+                  <div class="col-12" id="pokemon-stats">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="hp">HP:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="attack">Attack:</p>
+                      </div>
                     </div>
+                    <div class="row">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="defence">Defence:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="special-attack">Special Attack:</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="special-defence">Special Defence:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="speed">Speed:</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Go Back and Go to Website Button -->
+                  <div class="row">
+                    
+                    <div class="col-6 d-flex justify-content-center">
+                      <button id="website" type="button" class="btn btn-danger">
+                        Go to Website
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </main>
     <script src="style/js/java.js"></script>
 </body>
