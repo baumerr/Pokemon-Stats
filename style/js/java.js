@@ -76,10 +76,11 @@ function getPokemon(event) {
   fetch("https://pokeapi.co/api/v2/pokemon/" + searchPokemon.toLowerCase())
     .then(function (response) {
       if (response.ok) {
+        createCaughtPokemon();
+        document.querySelector("#search-pokemon").value = "";
         return response.json();
       } else {
-        alert("Error: Not found");
-        return;
+        return alert("Error: Not found");
       }
     })
     .then(function (response) {
@@ -164,9 +165,8 @@ function getPokemon(event) {
     website.innerHTML = "";
     website.innerHTML = '<a href="https://pokemondb.net/pokedex/' + websitePokemon + '"target="blank" class="text-decoration-none text-light"> Go to Website </a>'   
 
-  createCaughtPokemon();
 
-  document.querySelector("#search-pokemon").value = "";
+  
 }
 
 var startSearch = document.getElementById("user-submit");
