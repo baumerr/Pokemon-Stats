@@ -10,71 +10,118 @@
 </head>
 <body>
     <!-- Full page of a pokeball-->
-    <div class="container pokeball" id="pokeball">
-        <div class="row align-items-center">
-            <div class="col d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center">Pokémon</h1>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <input type="text" placeholder="Choose your Pokémon!">
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn btn-light">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- When Submit is clicked we come down here -->
-    <div class="container" id="pokemon-stats">
-        <div class="row align-items-center">
-            <div class="col d-flex justify-content-center">
-                <div class="row">
-                    <!-- Pokemon Name -->
-                    <div class="col-12">
-                        <h2 id="pokemon-name">Pokemon Name</h2>
-                    </div>
-                    <!-- Pokemon Images -->
-                    <div class="col-12" id="pokemon-image">
-                        <!-- Image of our pokemon and our pokemons evolution -->
-                        <div class="row">
-
-                        </div>
-                    </div>
-                    <!-- all the stats -->
-                    <div class="col-12" id="pokemon-stats">
-                        <div class="row">
-                            <div class="col-6">
-                                Attack
-                            </div>
-                            <div class="col-6">
-                                Defence
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                Stamina
-                            </div>
-                            <div class="col-6">
-                                IV
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Go Back and Go to Website Button -->
+    <main>
+        <div class="container pokeball pokeball-colour" id="pokeball">
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center">
                     <div class="row">
-                        <div class="col-6">
-                            <button type="button" class="btn btn-danger">Go Back</button>
+                        <form class="first align-items-center px-0" id="user-submit">
+                            <div class="d-flex">
+                                <ul id="caught-ulist" class="list-group list-group-horizontal flex-wrap">
+                                    <li id="caught-li"class="list-group-item rounded-end">Pokémon Caught</li>
+                                </ul>
+                                <button type="button" class="btn btn-warning" onclick="clearStorage()">Release Pokémon</button>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <img class="title-image" src="./style/images/pokemon.png" alt="Pokemon">
+                            </div>
+                            <div class="d-flex centering-search">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <input class="rounded" id="search-pokemon" type="text" placeholder="Choose your Pokémon!">
+                                </div>
+                            </div>
+                            <div class="centering-circle d-flex">
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <!--<button type="button" id="submit" class="btn btn-light" onclick="getPokemon()"</button>>Submit</button>-->
+                                    <button id="user-submit"type="submit" class="circle btn btn-light">Search</button>
+                                    <div class="outcircle"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="second d-flex justify-content-center">
                         </div>
-                        <div class="col-6">
-                            <button type="button" class="btn btn-danger">Go to Website</button>
-                        </div>
+                        <div class="third"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+              <!-- When Submit is clicked we come down here -->
+      <div class="container pokemon-stats" id="pokemon-stats">
+        <div class="row align-items-center">
+          <div class="col d-flex justify-content-center">
+            <div class="row">
+                <div id="no-entry" class="modal">
+                    <div class="modal-content">
+                      <span class="closer">&times;</span>
+                      <p>You need to enter something</p>
+                    </div>
+                </div>
+                <div id="not-found" class="modal">
+                    <div class="modal-content">
+                      <span class="closeing">&times;</span>
+                      <p>Error Pokemon not Found</p>
+                    </div>
+                </div>
+              <!-- My Modal -->
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+
+                  <!-- Pokemon Name -->
+                  <div class="col-12 d-flex justify-content-center">
+                    <h2 id="pokemon-name">Pokemon Name</h2>
+                  </div>
+                  <!-- Pokemon Images -->
+                  <div
+                    class="col-12 d-flex justify-content-center"
+                    id="pokemon-image"
+                  >
+                    <!-- Image of our pokemon and our pokemons evolution -->
+                    <div class="row"></div>
+                  </div>
+                  <!-- all the stats -->
+                  <div class="col-12" id="pokemon-stats">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="hp">HP:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="attack">Attack:</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="defence">Defence:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="special-attack">Special Attack:</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="special-defence">Special Defence:</p>
+                      </div>
+                      <div class="col-6 d-flex justify-content-center">
+                        <p id="speed">Speed:</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Go Back and Go to Website Button -->
+                  <div class="row">
+                    
+                    <div class="col-6 d-flex justify-content-center">
+                      <button id="website" type="button" class="btn btn-danger">
+                        Go to Website
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="style/js/java.js"></script>
 </body>
 </html>
