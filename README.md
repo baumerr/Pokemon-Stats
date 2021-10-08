@@ -11,7 +11,7 @@
 >
 | Screenshot 1 |
 |---Home Page---|
-![code snap shot 2](./pokemon-stats-home.png)
+![code snap shot 2](./style/images/pokemon-stats-home.png)
 
 | Screenshot 2 |
 |---Searched Pokemon---|
