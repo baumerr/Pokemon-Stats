@@ -11,17 +11,18 @@
 >
 | Screenshot 1 |
 |---Home Page---|
-| <img src="style/images/Pokemon-stats-home.png" width="300"> |
+![code snap shot 2](./pokemon-stats-home.png)
 
 | Screenshot 2 |
 |---Searched Pokemon---|
-| <img src="style/images/searched-pokemon.png" width="300"> |
+![code snap shot 2](./style/images/searched-pokemon.png)
+
 |---Original Search---|
-| <img src="style/images/Pokemon_screenshot.PNG" width="300"> |
+![code snap shot 2](/style/images/Pokemon_screenshot.PNG)
 
 | Screenshot 1 |
 |---Home Page---|
-| <img src="style/images/error-popup.png" width="300"> |
+![code snap shot 2](./style/images/error-popup.png)
 
 -----
 ### Technologies
