@@ -62,11 +62,11 @@ function getPokemon(event) {
   var searchPokemon = document.querySelector("#search-pokemon").value;
   var pokemonName = document.querySelector("#pokemon-name");
   pokemonName.innerHTML = "";
-  modal.style.display = "block";
+  
   console.log(searchPokemon);
 
   if (!searchPokemon) {
-    alert("You need to enter something");
+    noEntry.style.display = "block";
     return false;
   } else {
     console.log("yo");
@@ -78,9 +78,11 @@ function getPokemon(event) {
       if (response.ok) {
         createCaughtPokemon();
         document.querySelector("#search-pokemon").value = "";
+        modal.style.display = "block";
         return response.json();
       } else {
-        return alert("Error: Not found");
+        return notFound.style.display = "block";
+        
       }
     })
     .then(function (response) {
@@ -119,6 +121,7 @@ function getPokemon(event) {
 
       var pokeId = response.id;
       console.log(pokeId);
+      modal.style.display = "block";
 
       if (pokeId < 10) {
         return fetch(
@@ -194,5 +197,42 @@ span.onclick = function () {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+};
+
+//invalid entry
+// Get the modal
+var notFound = document.getElementById("not-found");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closeing")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  notFound.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == notFound) {
+    notFound.style.display = "none";
+  }
+};
+
+// no entry
+var noEntry = document.getElementById("no-entry");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closer")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  noEntry.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == noEntry) {
+    noEntry.style.display = "none";
   }
 };

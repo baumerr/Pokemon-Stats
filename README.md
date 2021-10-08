@@ -10,8 +10,19 @@
 ### Screenshot
 >
 | Screenshot 1 |
-|------------|
+|---Home Page---|
+| <img src="style/images/Pokemon-stats-home.png" width="300"> |
+
+| Screenshot 2 |
+|---Searched Pokemon---|
+| <img src="style/images/searched-pokemon.png" width="300"> |
+|---Original Search---|
 | <img src="style/images/Pokemon_screenshot.PNG" width="300"> |
+
+| Screenshot 1 |
+|---Home Page---|
+| <img src="style/images/error-popup.png" width="300"> |
+
 -----
 ### Technologies
 >

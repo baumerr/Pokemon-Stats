@@ -25,11 +25,11 @@
                             <div class="col-12 d-flex justify-content-center">
                                 <img class="title-image" src="./style/images/pokemon.png" alt="Pokemon">
                             </div>
-                            <div class="d-flex">
-                                <div class="centering-search col-12 d-flex justify-content-center">
+                            <div class="d-flex centering-search">
+                                <div class="col-12 d-flex justify-content-center">
                                     <input class="rounded" id="search-pokemon" type="text" placeholder="Choose your Pokémon!">
                                 </div>
-                                </div>
+                            </div>
                             <div class="centering-circle d-flex">
                                 <div class="col-12 d-flex justify-content-center align-items-center">
                                     <!--<button type="button" id="submit" class="btn btn-light" onclick="getPokemon()"</button>>Submit</button>-->
@@ -50,6 +50,18 @@
         <div class="row align-items-center">
           <div class="col d-flex justify-content-center">
             <div class="row">
+                <div id="no-entry" class="modal">
+                    <div class="modal-content">
+                      <span class="closer">&times;</span>
+                      <p>You need to enter something</p>
+                    </div>
+                </div>
+                <div id="not-found" class="modal">
+                    <div class="modal-content">
+                      <span class="closeing">&times;</span>
+                      <p>Error Pokemon not Found</p>
+                    </div>
+                </div>
               <!-- My Modal -->
               <div id="myModal" class="modal">
                 <div class="modal-content">

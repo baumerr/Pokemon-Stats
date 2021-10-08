@@ -15,8 +15,10 @@ header {
     max-height: 30%;
 }
 .centering-search {
-    position:absolute;
-    top: 28vh;
+    position: absolute;
+    top: 23vh;
+    left: 30vw;
+    right: 30vw;
 }
 #search-pokemon {
     padding:5px;
@@ -103,3 +105,30 @@ header {
     cursor: pointer;
   }
   
+  .closeing {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeing:hover,
+  .closeing:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .closer {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closer:hover,
+  .closer:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
